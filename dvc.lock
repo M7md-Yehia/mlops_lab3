@@ -45,3 +45,14 @@ stages:
       hash: md5
       md5: 9e62d0c9fbc6dbda69670ce190a5842b
       size: 1019
+  tune:
+    cmd: python tune.py
+    deps:
+    - path: data/preprocessed_churn.csv
+      hash: md5
+      md5: 67d02339bdac53bb482ee2fbce559217
+      size: 1180807
+    - path: tune.py
+      hash: md5
+      md5: 2106d2546291bbf280a2814e1f6946f1
+      size: 2316
