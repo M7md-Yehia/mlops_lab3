@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, roc_auc_score
+from sklearn.metrics import accuracy_score, roc_auc_score,precision_score, recall_score, f1_score
 import mlflow
 import joblib # Used for saving and loading scikit-learn models
 import dagshub
@@ -42,7 +42,11 @@ with mlflow.start_run(run_name="Logistic Regression Baseline"):
 
     mlflow.log_metric("accuracy", accuracy)
     mlflow.log_metric("auc", auc)
-
+    mlflow.log_metric("precision", precision_score(y_test, y_pred))
+    
+    mlflow.log_metric("recall", recall_score(y_test, y_pred))
+    
+    mlflow.log_metric("f1_score", f1_score(y_test, y_pred))
     # 6. Log Artifact (the model file)
     # Save the model using joblib
     joblib.dump(lr, "model.joblib")

@@ -21,8 +21,8 @@ stages:
       size: 1180807
     - path: train.py
       hash: md5
-      md5: f5f30793ba0402ef7744cfc70034b777
-      size: 1617
+      md5: a904a3d1faf5b4c5e3d155d24964b062
+      size: 1707
   train_xgb:
     cmd: python train_autolog_xgb.py
     deps:
