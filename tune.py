@@ -7,7 +7,8 @@ import mlflow
 import os
 
 dagshub.init(repo_owner='M7md-Yehia', repo_name='mlops-lab3', mlflow=True) 
-mlflow.set_experiment("Telco Churn Prediction")df = pd.read_csv('data/preprocessed_churn.csv')
+mlflow.set_experiment("Telco Churn Prediction")
+df = pd.read_csv('data/preprocessed_churn.csv')
 X = df.drop('Churn', axis=1)
 y = df['Churn']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -18,7 +19,7 @@ list_max_depth = [5, 10]
 
 with mlflow.start_run(run_name="RandomForest Tuning"):
     mlflow.set_tag("model_type", "RandomForest")
-    print("بدء تجربة Random Forest Tuning الرئيسية...")
+    print("Starting Random Forest Tuning experiments...")
 
     for n_estimators in list_n_estimators:
         for max_depth in list_max_depth:
