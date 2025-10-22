@@ -5,16 +5,19 @@ stages:
       - preprocess.py
     outs:
       - data/preprocessed_churn.csv
+
   train:
     cmd: python train.py
     deps:
       - train.py
       - data/preprocessed_churn.csv
-    train_xgb:
+
+  train_xgb:
     cmd: python train_autolog_xgb.py
     deps:
       - train_autolog_xgb.py
       - data/preprocessed_churn.csv
+      
   train_lgbm:
     cmd: python train_autolog_lgbm.py
     deps:
