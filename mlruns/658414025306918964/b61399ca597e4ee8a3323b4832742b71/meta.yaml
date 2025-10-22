@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/mlops/mlops_lab3/mlruns/658414025306918964/b61399ca597e4ee8a3323b4832742b71/artifacts
+end_time: 1761162300602
+entry_point_name: ''
+experiment_id: '658414025306918964'
+lifecycle_stage: active
+run_id: b61399ca597e4ee8a3323b4832742b71
+run_name: Logistic Regression Baseline
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761162300476
+status: 3
+tags: []
+user_id: moham

@@ -1,0 +1,6 @@
+artifact_location: file:///D:/mlops/mlops_lab3/mlruns/658414025306918964
+creation_time: 1761162300258
+experiment_id: '658414025306918964'
+last_update_time: 1761162300258
+lifecycle_stage: active
+name: Telco Churn Prediction

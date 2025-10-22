@@ -1,0 +1,25 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python preprocess.py
+    deps:
+    - path: preprocess.py
+      hash: md5
+      md5: 88e1ec37c48bc69ccb16938102a4a0b6
+      size: 1308
+    outs:
+    - path: data/preprocessed_churn.csv
+      hash: md5
+      md5: 67d02339bdac53bb482ee2fbce559217
+      size: 1180807
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/preprocessed_churn.csv
+      hash: md5
+      md5: 67d02339bdac53bb482ee2fbce559217
+      size: 1180807
+    - path: train.py
+      hash: md5
+      md5: f5f30793ba0402ef7744cfc70034b777
+      size: 1617
