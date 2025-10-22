@@ -4,7 +4,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score
 import mlflow
 import joblib # Used for saving and loading scikit-learn models
-
+import dagshub
+dagshub.init(repo_owner='M7md-Yehia', repo_name='mlops-lab3', mlflow=True)
 # Set the experiment name in MLflow
 mlflow.set_experiment("Telco Churn Prediction")
 
