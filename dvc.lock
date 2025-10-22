@@ -23,3 +23,25 @@ stages:
       hash: md5
       md5: f5f30793ba0402ef7744cfc70034b777
       size: 1617
+  train_xgb:
+    cmd: python train_autolog_xgb.py
+    deps:
+    - path: data/preprocessed_churn.csv
+      hash: md5
+      md5: 67d02339bdac53bb482ee2fbce559217
+      size: 1180807
+    - path: train_autolog_xgb.py
+      hash: md5
+      md5: 4cb7f7a70b6914c7741a8d94e2f67b22
+      size: 1082
+  train_lgbm:
+    cmd: python train_autolog_lgbm.py
+    deps:
+    - path: data/preprocessed_churn.csv
+      hash: md5
+      md5: 67d02339bdac53bb482ee2fbce559217
+      size: 1180807
+    - path: train_autolog_lgbm.py
+      hash: md5
+      md5: 9e62d0c9fbc6dbda69670ce190a5842b
+      size: 1019
