@@ -23,3 +23,9 @@ stages:
     deps:
       - train_autolog_lgbm.py
       - data/preprocessed_churn.csv
+
+  tune:
+    cmd: python tune.py
+    deps:
+      - tune.py
+      - data/preprocessed_churn.csv
